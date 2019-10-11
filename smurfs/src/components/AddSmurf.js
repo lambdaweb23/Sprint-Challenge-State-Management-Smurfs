@@ -3,6 +3,17 @@ import { connect } from "react-redux";
 import { addSmurf } from "../actions";
 
 const AddSmurf = props => {
+
+    const addNewSmurf = e => {
+        e.preventDefault();
+        const newSmurf = {
+            name,
+            age,
+            height
+        };
+        props.addSmurf(newSmurf);
+    };
+
     const [name, setName] = useState('');
     const [age, setAge] = useState('');
     const [height, setHeight] = useState('');
@@ -11,7 +22,7 @@ const AddSmurf = props => {
 
     return (
         <div className="smurf-form">
-            <form>
+            <form onSubmit={addNewSmurf}>
                 <input
                     onChange={e => setName(e.target.value)}
                     placeholder="name"
@@ -40,4 +51,7 @@ const AddSmurf = props => {
     )
 }
 
-export default AddSmurf;
+export default connect(
+    null,
+    { addSmurf }
+)(AddSmurf);

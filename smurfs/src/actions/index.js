@@ -4,7 +4,7 @@ export const GET_SMURFS = 'GET_SMURFS';
 export const GET_SMURFS_SUCCESS = 'GET_SMURFS_SUCCESS';
 export const GET_SMURFS_FAILURE = 'GET_SMURFS_FAILURE';
 
-const URL = 'http://localhost:5000/smurfs';
+const URL = 'http://localhost:3333/smurfs';
 
 export const getSmurfs = () => dispatch => {
     dispatch({ type: GET_SMURFS });
