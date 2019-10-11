@@ -1,11 +1,12 @@
 .App {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .smurf-list {
-  margin-top: 25px;
+  margin: 25px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
