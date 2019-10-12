@@ -23,16 +23,32 @@ In this challenge, you are to build a Smurfs village utilizing context or Redux 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
+
+Context API allows components to share data without passing props to each component manually.
+
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+Store - holds state
+Actions - holds the functions that will be imported to the reducer
+Reducer - updates the state that changes from the functions being ran
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+Application state is global and component state is local. Component state can only be used in that component and be passed to it's children. You would use application state if you were going to pass all of the different data from one API to the child components
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+Redux Thunk is a middleware that lets you call action creators that return a function instead of an object. It dispatches actions asynchronously.
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+I like using Redux because I think it's used more widely and for larger applications, it's something I've been working hard to understand.
 
 ## Project Set Up
 
 Follow these steps to set up your project:
 
-- [ ] `fork & clone` this repository.
+- [ ] `fork & clone` this repository
 - [ ] `cd` into the forked copy of this repository.
 - [ ] **RUN** `yarn` to retrieve all `server-side` the dependencies.
 - [ ] **RUN** `yarn start` or `npm start` to get your API up and running on `http://localhost:3333`. This is the **URL** you're going to need to use within your React app in order to make AJAX requests for data.
